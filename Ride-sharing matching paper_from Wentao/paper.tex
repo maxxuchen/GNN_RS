@@ -1,0 +1,773 @@
+%%
+%% This is file `sample-sigconf.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `sigconf')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-sigconf.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%% The first command in your LaTeX source must be the \documentclass command.
+\documentclass[sigconf]{acmart}
+%% NOTE that a single column version is required for 
+%% submission and peer review. This can be done by changing
+%% the \doucmentclass[...]{acmart} in this template to 
+%% \documentclass[manuscript,screen]{acmart}
+%% 
+%% To ensure 100% compatibility, please check the white list of
+%% approved LaTeX packages to be used with the Master Article Template at
+%% https://www.acm.org/publications/taps/whitelist-of-latex-packages 
+%% before creating your document. The white list page provides 
+%% information on how to submit additional LaTeX packages for 
+%% review and adoption.
+%% Fonts used in the template cannot be substituted; margin 
+%% adjustments are not allowed.
+
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmcopyright}
+\copyrightyear{2018}
+\acmYear{2018}
+\acmDOI{XXXXXXX.XXXXXXX}
+
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[Conference acronym 'XX]{Make sure to enter the correct
+  conference title from your rights confirmation emai}{\tcr{June 03--05,
+  2018}}{Woodstock, NY}
+%
+%  Uncomment \acmBooktitle if th title of the proceedings is different
+%  from ``Proceedings of ...''!
+%
+%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%  June 03--05, 2018, Woodstock, NY} 
+\acmPrice{15.00}
+\acmISBN{978-1-4503-XXXX-X/18/06}
+
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+%%\citestyle{acmauthoryear}
+
+%%
+%% end of the preamble, start of the body of the document source.
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\let\Bbbk\relax         %%redefined in newtxmath.sty
+\usepackage{amssymb}
+\usepackage{babel}
+\usepackage{url}
+
+\newcommand{\tcr}[1]{{\textcolor{red}{#1}}}
+\newcommand{\tcb}[1]{{\textcolor{blue}{#1}}}
+\newcommand{\tcg}[1]{{\textcolor{green}{#1}}}
+\newcommand{\tco}[1]{{\textcolor{cyan}{#1}}}
+
+\begin{document}
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{A Learning-based Approach for Ride-sharing Matching}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+% \author{Ben Trovato}
+% \authornote{Both authors contributed equally to this research.}
+% \email{trovato@corporation.com}
+% \orcid{1234-5678-9012}
+% \author{G.K.M. Tobin}
+% \authornotemark[1]
+% \email{webmaster@marysville-ohio.com}
+% \affiliation{%
+%   \institution{Institute for Clarity in Documentation}
+%   \streetaddress{P.O. Box 1212}
+%   \city{Dublin}
+%   \state{Ohio}
+%   \country{USA}
+%   \postcode{43017-6221}
+% }
+
+% \author{Wentao Zhao \tcr{(anonymous for the 1st round review?)}}
+% \affiliation{%
+%   \institution{Columbia University}
+% %   \streetaddress{1 Th{\o}rv{\"a}ld Circle}
+%   \city{New York}
+%   \country{USA}}
+% \email{wz2543@columbia.edu}
+
+% \author{Xuan Di}
+% \affiliation{%
+%   \institution{Columbia University}
+% %   \streetaddress{1 Th{\o}rv{\"a}ld Circle}
+%   \city{New York}
+%   \country{USA}
+% }
+% \email{sharon.di@columbia.edu}
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+% \renewcommand{\shortauthors}{Trovato and Tobin, et al.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+Wait to be written.
+\end{abstract}
+
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10010405.10010481.10010485</concept_id>
+       <concept_desc>Applied computing~Transportation</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Applied computing~Transportation}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{ride-sharing matching, graph neural networks, evolutionary strategy}
+
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\tcr{(make sure you cite relevant papers from KDD. Likely that Zhiwei Qin from DiDi will review our paper, so be cauerful about wording when reviewing the gap.)}
+
+\section{Introduction}
+
+%Ride-sharing is an important component of the emerging sharing economy, which 
+Ride-sharing connects multiple riders with a single driver to share the vehicle
+and part of their rides. \tcr{(Ride-sharing is a broader and super confusing and ambiguous term. What the service we are focused on carries many names, like "ride-sourcing," "ride-pooling, or "shuttle/bus-on-demand." We should distinguish it in our paper.)}
+% Compared with ride-hailing, ride-sharing
+% is more economically beneficial for both customers and drivers and
+% can alleviate traffic congestion by reducing the number of vehicles
+% on the road. Recent research expects its market size to experience
+% significant growth in the next five years, forecasting a 537\% global
+% market size growth, from \$147 billion in 2021 to \$937 billion by
+% 2026 \cite{adam2021rideshare}. 
+A ride-sharing service consist of
+passengers, drivers, and a ride-sharing platform. \tcr{(service consists of a platform?)} 
+The platform collects
+passengers' travel information, merges individual trip requests into
+shared rides, and dispatches vehicles to serve them. 
+%Even if ride-sharing has become popular in major cities in the United States, problems such as long waiting times for customers and inefficient order distribution still plague its future development. 
+Although ride-sharing can alleviate traffic congestion by reducing the number of vehicles on the road, long waiting times for customers and inefficient order distribution are challenging . 
+\tcr{From the perspective of the ride-sharing platform}, 
+our paper focuses on answering the following two
+\tcr{problems}: 
+\tcr{(I feel these 2 questions are common for a 2-phase dynamic ridesharing problem. Maybe u should just introduce these 2 phases here and describe the challenge for each phase.)}
+i) how to efficiently match passengers to other passengers
+to save on trip costs without losing convenience; 
+ii) how to assign rides to drivers so that the platform can serve more customers and prepare for the potential trip demand.
+
+Our paper considers a two-phase dynamic ride-sharing matching problem,
+\tcr{a more generalized model based on \cite{bei2018algorithms} (why more generalized?)}. 
+\tcr{In particular, we assume that the trip requests arise dynamically and require to be served within a time window. (aren't this a common assumption?)} 
+We make a list of assumptions: 
+(1) ...
+(2) Only two trip requests can be merged.
+In the first phase, given the information
+of all existing trip requests, the platform decides whether to combine
+any two individual trip requests into a shared ride. %Note that we exclude the situation that more than two trip requests are merged.
+As to graph modeling, we consider the existing trip requests as vertex
+and formulate the problem as finding the optimal matching, which is
+a set of edges without common vertices, in a general undirected graph.
+In the second phase, the matching problem is similar to the order-dispatch
+problem in the ride-hailing literature \cite{wang2018deep,xu2018large,li2019efficient,zhou2019multi}.
+The platform assigns both the shared rides and the unmatched trip
+requests to idle drivers. It is inherently a bipartite graph matching
+problem, i.e., finding the optimal matching given a bipartite undirected
+graph. We assume that the unassigned shared rides will be divided
+and appear as individual trip requests at the next time step.
+
+\tcr{(These challenges need to be condensed. The current writing is very informal.)}
+There are unique challenges to solving the two-phase dynamic ride-sharing
+matching problem. (i) Large scale: New York City, for example, has
+more than 13000 taxis and 270 trip requests every minute; (ii) Online
+\tcr{manner}: the problem is dynamic with a strong spatial-temporal dependency;
+(iii) \tcr{Multi-graph setting}: the matching algorithms have to deal with
+both general graphs (matching passengers to other passengers) and
+bipartite graphs (matching passengers to drivers); (iv) High-efficiency:
+the smooth operation of the ride-sharing platform requires efficient
+algorithms for real-time matching under the large-scale data set. 
+\tcr{(This is a too strong statement and we cannot claim confidently that we address them all together in this paper.) To the best of the authors' knowledge, no paper has addressed all of these challenges simultaneously.} 
+
+In this paper, we \tcr{put forward} a unified learning-based approach for
+solving the two-phase dynamic ride-sharing matching problem. 
+\tcr{(Below summary of our method should be removed. You should justify why we adopt a learning based approach, and what methodological contributions of this paper are compared to existing work.)}
+For the
+first and second phases, we train the Residual Gated Graph Convolutional
+Network (RGGCN) \cite{bresson2017residual,joshi2019efficient} and
+the bipartite RGGCN to predict the likelihood, for each edge, of whether
+it belongs to the optimal matching. Then, we perform the greedy search
+algorithm to convert the output of the network models to valid matchings
+that satisfy all real-world constraints of ride-sharing. Rather than
+employing the reinforcement learning paradigms as \cite{li2019efficient,al2019deeppool,jintao2020learning,shah2020neural,qin2021reinforcement},
+we design a special training method \tcr{(in what phase?)} in a combination of supervised
+learning and evolutionary strategy (ES). Specifically, we use a traditional
+approach \tcr{(what traditional approach? in what phase?)} to solve the two-phase dynamic ride-sharing matching problem
+and train RGGCN and bipartite RGGCN to imitate the solutions \tcr{(I am completely lost. When did u use graphs, when use special training, and when use traditional approach?)}. We then
+add random noise to the parameter space of the network model, estimate
+the gradient of the network performance, and update the parameter
+iteratively. In this way, the models can self-evolve by interacting
+with the environment and significantly outperform the traditional
+approach. Lastly, we apply our approach to the New York City yellow
+taxi data set \cite{nycwebsite} {[}{[}results need to be written{]}{]}. 
+
+\tcr{(even after delving into method., I am still not convinced why our approach is superior and worth of getting published in a prestigious CS conference like KDD. To my understanding, it's like a bunch of bits and pieces borrowed from different papers.)}
+
+\textbf{Contribution.}
+\begin{itemize}
+  \item Incorporate the bipartite structure to RGGCN so that it can solve the driver-ride matching problem;
+  \item Propose an end-to-end learning based approach that do not need inefficient solver;
+  (The learning-based approach can outperform the optimization-based approach in terms of solution quality and speed under a given data set)
+  \item Design new training method. (It needs the support of the numerical experiment)
+\end{itemize}
+
+
+The rest of the paper is organized as follows: we describe the two-phase
+dynamic ride-sharing matching problem in Section 2. The details of
+the RGGCN and bipartite RGGCN, and the training procedure are introduced
+in Section 3. We discuss the application of our approach to New York
+City yellow taxi data set and compare our method \tcr{with} other state-of-art
+optimization-based and learning-based approaches. Section 4 concludes
+the paper.
+
+\section{Related Papers \tcr{(this sec. should start right at P2)}}
+
+\subsection{Optimization-based Matching Algorithm}
+
+\tcr{(offensive. u should use words carefully when reviewing others' work and research gaps.) The early researchers tend to turn the ride-sharing matching problem
+into similar problems that have already been well studied.} For example,
+the ride-sharing matching problem can be transformed into maximum
+weighted matching and maximum bipartite weighted matching problems
+and get solved via the classical Blossom algorithm \cite{danassis2019putting}.
+The second phase, matching passengers to drivers, can also be viewed
+as a variant of k-Taxi Problem \cite{coester2019online} or k-Server
+Problem \cite{koutsoupias1995k,koutsoupias2009k} 
+\tcr{and obtain solutions
+accordingly.} 
+
+\tcr{(What's the connection of the below paragraph to the previous one? Condense the below reviews. It remains unclear what each paper has done and what methods used, and where the research gaps are.)}
+Regarding the literature on ride-sharing matching, existing studies
+mainly focus on mathematical models and optimization techniques. For
+example, \cite{santos2013dynamic} proposes a heuristic algorithm
+for dynamic taxi-sharing, maximizing the number of shared trips. \cite{alonso2017demand}
+is a highly cited paper that puts forward a dynamic trip-vehicle assignment
+algorithm considering vehicle relocation. \cite{dickerson2018allocation}
+models the ride-sharing matching as the online bipartite matching
+with reusable resources problem and provides an adaptive approximation
+algorithm. \cite{bei2018algorithms} proposes a two-phase simplification
+model for ride-sharing and an approximation algorithm with the worst-case
+approximation guarantee. 
+
+\subsection{Learning-based Matching Algorithm}
+
+\tcr{(A transition sentence: what's the shortcoming of optimization-based, and why learning-based.)}
+% The latest research on ride-sharing matching has developed some promising
+% learning-based approaches that integrate the previous optimization-based
+% approaches with machine learning. In particular, reinforcement learning
+% (RL), which trains agents to make optimal decisions by interacting
+% with the environment, is widely used. 
+
+Some papers \cite{??} propose algorithms based on the single-agent RL approach.
+In detail, they consider decentralized modeling and regard the drivers
+as an agent. They apply all drivers' experiences to train the single
+agent and then copy the agent's information to all drivers. For example,
+\cite{tang2019deep}, \cite{al2019deeppool} learn a value function
+for the nearby locations of drivers to decide their next destinations.
+\cite{wang2018deep}, \cite{xu2018large} propose order dispatch algorithms
+that learn the value function of assigning an order to a driver. \cite{holler2019deep},
+\cite{tang2021value} learn a unified value function for both order
+dispatch and vehicle relocation. 
+
+From the system-level perspective, the single-agent approach ignores
+the interactions and cooperation of drivers. Therefore, it is natural
+to consider each driver as an independent agent and apply the multi-agent
+RL approach. The main challenge lies in the scale of the problem:
+thousands of vehicles equal thousands of agents, making the learning
+process intractable. To solve this issue, \cite{li2019efficient}
+applies the mean-field approximation that uses the average action
+among neighborhoods to simplify the local interactions. \cite{zhou2019multi}
+assumes no communication among agents and uses Kullback-Leibler divergence
+optimization to accelerate learning. 
+
+The previous learning-based approaches have already shown great potential
+in solving the ride-sharing matching problem. However, \tcr{the learning part only takes a small proportion of the solution framework (?).} 
+The rest of their methods still require \tcr{inefficient} optimization techniques.
+For example, \cite{xu2018large,shah2020neural,tang2021value} need
+the Integer Linear Programming solver to get the \tcr{ultimate solution}
+for ride-sharing matching. As the scale of the problem increases,
+the overall speed of their solution frameworks will be significantly
+constrained by the optimization-based \tcr{parts (how many optimization parts?)}. 
+
+\section{Problem Statement}
+
+In this section, we formally state the two-phase dynamic ride-sharing
+problem. %We consider New York City as the operational region and 
+\tcb{Below, we will first introduce each problem component.}
+
+\subsection{Problem components}
+
+\tcr{(Problem components below should be condensed.)}
+\noindent\textbf{Time window. } The temporal horizon is discretized into $T=\{1,2,...,|T|\}$ with uniform time intervals. 
+
+\noindent\textbf{Driver. }A driver $w\in W^{t}$ is accompanied by a feature
+tuple $x_{w}=<x_{w}^{t},\ y_{w}^{t},\ ,s_{w}^{t}>$, where $W^{t}$
+denotes the set of idle drivers at the time step $t$, $x_{w}^{t}$
+and $y_{w}^{t}$ are defined as the latitude and longitude of the
+driver $w$ at the time step $t$, and $s_{w}^{t}$ is a binary indicator
+to denote the status of the driver $w$ at the time step $t$. A driver
+is idle ($s_{w}^{t}=0$) when he does not have any ongoing task and
+is available for new customers. A driver ($s_{w}^{t}=1$) is occupied
+when he is either picking up customers or delivering them to the destinations.
+We assume that the ride-sharing platform is only responsible for managing
+idle drivers, and the occupied drivers will complete their orders
+independently, following the shortest driving distance principle.
+We also assume that the driving speed is fixed for all vehicles. 
+
+\noindent\textbf{Trip requests.} A trip request $r\in R^{t}$ is accompanied
+by a feature tuple $x_{r}=<x_{r}^{o},\ y_{r}^{o},\ x_{r}^{d},\ y_{r}^{d},\ n_{r},\ \tau_{r}^{t}>$,
+where $R^{t}$ denotes the set of \tcr{arising} trip requests at time
+step $t$, $x_{r}^{o},\ y_{r}^{o},\ x_{r}^{d},\ y_{r}^{d}$ are \tcr{defined (remove)}
+as the latitude and longitude of the origin and destination of the
+request $r$, $n_{r}$ is \tcr{defined (remove)} as the number of passengers of the
+tip request $r$, and $\tau_{r}^{t}$ denotes the waiting time of
+the trip request $r$ at the time step $t$. We assume that there
+is a maximum waiting time $\tau_{max}$ for each trip request. If
+the waiting time of the trip request $r$ exceeds the maximum waiting
+time (i.e., $\tau_{r}^{t}>\tau_{max}$) \tcr{without being assigned drivers,}
+the ride-sharing platform will lose this trip request.
+
+\textbf{Rides. }A ride $p\in P^{t}$ is accompanied by a feature tuple
+$x_{p}=<x_{r_{1}},x_{r_{2}}>$ where $P^{t}$ denotes the existing
+rides at the time step $t$, $r_{1}$ and $r_{2}$ are the tuples
+of the trip requests $r_{1}$and $r_{2}$. At each time step, the
+ride-sharing platform matches all existing trip requests, including
+newly rising ones and accumulated ones, into shared rides. We consider
+the unmatched trip requests as single rides and let $r_{1}=r_{2}$.
+The ride-sharing platform then assigns both single and shared rides
+to idle drivers. We assume that the unassigned rides will decompose
+into individual trip requests and accumulate at the next time step
+unless their waiting time exceeds the maximum waiting time.
+
+\textbf{Distance.} The locations of drivers, trip requests, and rides
+are given in latitude and longitude coordinates. \tcr{Since we regard New
+York City as the operational region, applying the Manhattan distance
+to approximate the actual distance is reasonable. Note that we assume
+the driving speed is constant. In this way, given any two locations,
+the traveling time from one location to the other is fixed. (the problem statement should be general, not specific to one area.)}
+
+\textbf{Pricing. }%The pricing principles for single and shared rides are the same as \cite{danassis2019putting}. 
+\tcr{(the below description of pricing structure is super confusing, can u explain it based on Equ. $U(p)$?)}
+We consider a one-time
+\tcr{drop fee (is this a formal name?)} ($\beta=2.2\ \$$) for each trip request and two different
+distance fare ($\alpha_{1}=0.994\ \$/km$ for single ride, $\alpha_{2}=0.8\ \$/km$
+for shared rides). 
+The cost of a ride is equal to the total driving
+distance times the unit fuel price ($\gamma=0.0686\ \$/km$). The
+revenue $U(p,w)$ of the driver $w$ to serve the ride $p$ takes
+the form: 
+
+\[
+U(p)=\begin{cases}
+\beta+\alpha_{1}d(r)-\gamma d(r|w), & p=<r,r>\\
+2\beta+\alpha_{2}d(r_{1}|r_{2})+\alpha_{2}d(r_{2}|r_{1})-\gamma d(r_{1},r_{2}|w), & p=<r_{1},r_{2}>
+\end{cases}
+\]
+\tcr{(no equ. number for any equation?)}
+where $d(r)$ denotes the distance to be billed of the trip request
+$r$ when the passengers are in the vehicle, $d(r|w)$ denotes the
+total distance of serving the trip request $r$ given the information
+of the driver $w$, $d(r_{1}|r_{2})$ denotes the billing distance
+of serving the trip request $r_{1}$ if the trip requests $r_{1}$
+and $r_{2}$ share part of part of the ride, and $d(r_{1},r_{2}|w)$
+denotes the total distance of serving the shared ride $p$ given the
+information of the driver $w$.
+
+\subsection{Two-phase \tcr{(or two-stage?)} problem statement}
+
+\tcb{The problem components above and the 2-phase below should not be in parallel. With the components above defined, we are ready to present our 2-phase problem.}
+
+\textbf{First phase.} \tcr{(here we should state the problem to solve for each phase. THe detailed methogology goes to Sec. 4. O.w., what's the difference here from Sec. 4?)} We use a general graph $G^{t}=\{R^{t},\ E_{G}^{t}\}$
+to \tcr{model the first-phase dynamic ride-sharing matching problem (i.e.,
+matching trip requests to other trip requests) (u should first explicitly define what problem to solve in each phase.} where vertex $R^{t}$
+is the accumulated trip requests at the time step $t$ and edges $E_{G}^{t}$
+denotes the candidate pairing between two trip requests at the time
+step $t$. The feature of edge $(r_{1},r_{2})$ is defined as a tuple
+$<d(r_{1},r_{2}),\ l_{(r_{1},r_{2})}>$ where $d(r_{1},r_{2})$ denotes
+the distance between the origins of the trip requests $r_{1}$, $r_{2}$
+and $l$ is an binary indicator. $l_{(r_{1},r_{2})}=1$ if the trip
+requests $r_{1},r_{2}$ are eligible for matching, which means there
+is sufficient overlap between $r_{1},r_{2}$ and the number of passengers
+does not exceed the vehicle capacity, $l_{(r_{1},r_{2})}=0$ otherwise.
+The output of the first phase is a matching $M_{G}^{t}\subset E_{G}^{t}$
+of the graph $G^{t}$. If an edge $(r_{1},r_{2})\in M_{G}^{t}$, we
+form the trip requests $r_{1},r_{2}$ into a shared ride. If all edges
+adjacent to the vertex $r$ do not belong to the matching $M_{G}^{t}$,
+we consider $r$ as a single ride. 
+
+\textbf{Second phase.} We use a bipartite graph $B^{t}=\{P^{t},\ W^{t},\ E_{B}^{t}\}$
+to model the second phase dynamic ride-sharing matching problem (i.e.,
+matching rides to idle drivers) where the vertex $P^{t}$ denotes
+the existing rides at the time step $t$, the vertex $W^{t}$ denotes
+the idle drivers at the time step $t$, and the edges $E_{B}^{t}$
+denotes the candidate pairing between rides and idle drivers at the
+time step $t$. The feature of edge $(p,w)$ is defined a tuple $<d(p|w),\ l_{(p,w)}>$
+where $d(p|w)$ denotes the total driving distance of the driver $w$
+to serve the ride $p$ and $l_{(p,w)}$ is a binary indicator. $l_{(p,w)}=1$
+if the ride $p$ and the driver $w$ are eligible to get paired. Specifically,
+the driver $w$ can pick up the passengers of ride $p$ within a pre-specified
+waiting time. $l_{(p,w)}=0$ otherwise. The output of the second phase
+is a matching $M_{B}^{t}\subset E_{B}^{t}$ of the bipartite graph
+$B^{t}$. If an edge $(p,w)\in M_{B}^{t}$, we assign the ride $p$
+to the idle driver $w$.
+
+\textbf{Objective. }The goal of our model is to maximize the expected
+accumulated revenue of all drivers, i.e., 
+
+\[
+\text{MAXIMIZE}\ \ \ \sum_{w\in W}\mathbb{E}[\sum_{t\in T}(\sum_{p\in P^{t}}\lambda_{wp}^{t}U(p))],
+\]
+where $U(p)$ denotes the revenue of the ride $p$, $\lambda_{wp}^{t}$
+is binary indicator, $\lambda_{wp}^{t}=1$ if the ride $p$ is assigned
+to the driver $w$ at the time step $t$, $\lambda_{wp}^{t}=0$ if
+not.
+
+\tcr{(make sure all the notations are consistent throughout the paper.)}
+
+\section{Methodology}
+\tcr{(u should add a flowchart depicting the 2-phase DRSM problem here as an overview of our method.)
+(shall we define an acronym such as "DRSM" if "dynamic ride-sharing matching problem" is used frequently?)}
+
+In this section, we introduce the \tcr{network architecture (what network? This sec. is all about method., do NOT expect readers to know details before u delve into details.)} and the training
+procedure. We apply RGGCN for the first-phase general graphs and bipartite
+RGGCN for the second-phase bipartite graphs. The outputs of both network
+models predict the likelihood of each edge being part of the optimal
+matching. We use the greedy search algorithm to convert the prediction
+into a valid matching. We train both network models using supervised
+learning and ES. 
+
+\tcr{Given 2-phase, I expect to see the subsection headings like "Phase-1 model,""Phase-2 model"....}
+
+\subsection{Network Architecture}
+[[RGGCN as the title]]
+[[make it more condense, get ride of the equations]]
+\textbf{RGGCN for General Graph.} We embed the trip request node tuple
+$x_{r}\in\mathbb{R}^{5}$ to a $h$-dimensional input node feature
+vector $\alpha_{r}$ as 
+\[
+\alpha_{r}=A_{1}x_{r}+b_{1},
+\]
+where $A_{1}\in\mathbb{R}^{h\times5}$, $b_{1}\in\mathbb{R}^{h}$.
+
+The input edge feature vector $\beta_{(r_{1},r_{2})}$ has $h$ dimensions
+and takes the form:
+
+\[
+\beta_{(r_{1},r_{2})}=A_{2}d(r_{1},r_{2})+b_{2}||A_{3}\delta_{(r_{1},r_{2})},
+\]
+ where $A_{2}\in\mathbb{R}^{\frac{h}{2}\times1}$, $A_{3}\in\mathbb{R}^{\frac{h}{2}\times2}$,
+$b_{2}\in\mathbb{R}^{\frac{h}{2}}$, $\bullet||\bullet$ is the concatenation
+operator, $d(r_{1},r_{2})$ is the distance between the origins of
+the trip requests $r_{1},r_{2}$, and $\delta_{\left(r_{1},r_{2}\right)}$
+is an indicator function with value one if the edge $(r_{1},r_{2})$
+satisfies the constraints of ride-sharing and value zero otherwise.
+
+\tcr{We follow the same graph convolution layer structure as \cite{joshi2019efficient}. (should highlight what's our contribution?)}
+We define $x_{r}^{l}$ and $e_{(r_{1},r_{2})}^{l}$ as the feature
+vectors of node $r$ and edge $(r1,r2)$ at the $l$-th layer. The
+node and edge feature vectors at the next layer are defined as: 
+\tcr{(can u draw an NN architecture to describe the structure?)}
+\[
+x_{r}^{l+1}=x_{r}^{l}+\text{ReLU}(\text{BN}(W_{1}^{l}x_{r}^{l}+\sum_{r'\sim r}\eta_{r'r}^{l}\odot W_{2}^{l}x_{r}^{l})),
+\]
+\[
+\eta_{r'r}^{l}=\frac{\sigma(e_{(r,r')}^{l})}{\sum_{r''\sim r}\sigma(e_{(r,r'')}^{l})+\epsilon},
+\]
+\[
+e_{(r_{1},r_{2})}^{l+1}=e_{(r_{1},r_{2})}^{l}+\text{ReLU}(\text{BN}(W_{3}^{l}e_{(r_{1},r_{2})}^{l}+W_{4}^{l}x_{r_{1}}^{l}+W_{5}^{l}x_{r_{2}}^{l})),
+\]
+where $W_{1},W_{2},W_{3},W_{4},W_{5}\in\mathbb{R}^{h\times h}$, $\sigma(\bullet)$
+is the sigmoid function, $\epsilon$ is a tiny value, ReLU and BN
+denote the rectified linear unit and batch normalization, respectively.
+The initial-layer feature vectors equal the input feature vectors,
+i.e., $x_{r}^{0}=\alpha_{r},\ e_{(r_{1},r_{2})}^{0}=\beta_{(r_{1},r_{2})},\forall r,r_{1},r_{2}\in R$.
+
+The last-layer edge feature vector $e_{(r_{1},r_{2})}^{L}$ is used
+to predict the likelihood of the edge $(r_{1},r_{2})$ being part
+of the optimal matching. We employ a multi-layer perceptron (MLP)
+to output $\text{Prob.}(r_{1},r_{2})\in[0,1]^{2}$ as
+
+\[
+\text{Prob.}(r_{1},r_{2})=\text{MLP}_{1}(e_{(r_{1},r_{2})}^{L}).
+\]
+
+\textbf{Bipartite RGGCN for Bipartite Graph.} Different from the general
+graphs, the bipartite graphs have two types of nodes, and the edges
+only exist between \tcr{antonymous} nodes. In this way, we modify the RGGCN
+to accommodate the bipartite structure. We embed both ride node tuple
+$x_{p}\in\mathbb{R}^{9}$ and driver node tuple $x_{w}\in\mathbb{R}^{2}$
+to $h$-dimensional input node features as 
+
+\[
+\alpha_{p}=A_{4}x_{p}+b_{4},
+\]
+
+\[
+\alpha_{w}=A_{5}x_{w}+b_{5},
+\]
+where $A_{4}\in\mathbb{R}^{h\times9}$, $A_{5}\in\mathbb{R}^{h\times2}$,
+$b_{4},b_{5}\in\mathbb{R}^{h}$.
+
+The input edge feature vector $\beta_{(p,w)}$ has $h$ dimensions
+and takes the form:
+
+\[
+\beta_{(p,w)}=A_{6}d(p|w)+b_{6}||A_{7}\delta_{(p,w)},
+\]
+ where $A_{6}\in\mathbb{R}^{\frac{h}{2}\times1}$, $A_{7}\in\mathbb{R}^{\frac{h}{2}\times2}$,
+$b_{6}\in\mathbb{R}^{\frac{h}{2}}$, $\bullet||\bullet$ is the concatenation
+operator, $d(p|w)$ denotes the total driving distance of the driver
+$w$ to serve the ride $p$, $\delta_{\left(p,w\right)}$ is an indicator
+function with value one if the edge $(p,w)$ meets all real-world
+constraints and value zero otherwise. 
+
+\tcr{We design the bipartite graph convolution layer with reference to
+\cite{gasse2019exact}. 
+(the way u introduce these 2 graphs made me feel we didn't have any contribution, only borrowing bits and parts from other work.)}
+The original graph convolution is decomposed
+into two independent half-convolutions. The first half-convolution
+passes the information from the drivers to rides, and the second passes
+information from the rides to drivers. We define $x_{p}^{l},x_{w}^{l}$
+and $e_{(p,w)}^{l}$ as the feature vectors of the node $p,w$, and
+the edge $(p,w)$ at the $l$-th layer. The node and edge feature
+vectors at the next layer are defined as: 
+
+\[
+x_{p}^{l+1}=x_{p}^{l}+\text{ReLU}(\text{BN}(W_{6}^{l}x_{p}^{l}+\sum_{w\sim p}\eta_{wp}^{l}\odot W_{7}^{l}x_{p}^{l})),
+\]
+
+\[
+\eta_{wp}^{l}=\frac{\sigma(e_{(w,p)}^{l})}{\sum_{w'\sim p}\sigma(e_{(w',p)}^{l})+\epsilon},
+\]
+
+\[
+x_{w}^{l+1}=x_{w}^{l}+\text{ReLU}(\text{BN}(W_{8}^{l}x_{w}^{l}+\sum_{p\sim w}\eta_{pw}^{l}\odot W_{9}^{l}x_{w}^{l})),
+\]
+
+\[
+\eta_{pw}^{l}=\frac{\sigma(e_{(p,w)}^{l})}{\sum_{p'\sim w}\sigma(e_{(p',w)}^{l})+\epsilon},
+\]
+
+\[
+e_{(p,w)}^{l+1}=e_{(p,w)}^{l}+\text{ReLU}(\text{BN}(W_{10}^{l}e_{(p,w)}^{l}+W_{11}^{l}x_{p}^{l}+W_{12}^{l}x_{w}^{l})),
+\]
+\tcr{(hard to follow the architecture. need to come up w. a simpler way to present NN.)}
+where $W_{6},W_{7},W_{8},W_{9},W_{10},W_{11},W_{12}\in\mathbb{R}^{h\times h}$.
+The initial node and edge feature vectors are equal to the input node
+and edge feature, i.e., $x_{p}^{0}=\alpha_{p}$, $x_{w}^{0}=\alpha_{w}$,
+$e_{(p,w)}^{0}=\beta_{(p,w)}$, $\forall p\in P,w\in W$. 
+
+We use the last-layer edge feature vectors and \tcr{a} MLP \tcr{to obtain the
+prediction of the likelihood of the edge $(p,w)$ being part of the
+optimal matching. (only till now I understand why a graph is needed. The input and output of each graph should be stated upfront.)} 
+The computation takes the form:
+
+\[
+\text{Prob.}(p,w)=\text{MLP}_{2}(e_{(p,w)}^{L}).
+\]
+
+\textbf{Greedy Search.} We can view the output of both RGGCN and bipartite
+RGGCN models as \tcr{the} probabilistic heat maps over all edges of the
+graph. In general, simply choosing edges with the highest probability
+will form an invalid matching. Therefore, we take the probabilistic
+heat maps as references and apply the greedy search algorithm to convert
+them into valid matchings. Specifically, the algorithm greedily selects
+the edge with the highest probability and then masks all edges that
+share a node with the selected edge. The algorithm terminates when
+all edges have been selected or masked. 
+
+\tcr{(there should be a subsection or paragraph on "Simulator."}
+
+\subsection{Training}
+
+We train both RGGCN and bipartite RGGCN models using supervised learning
+and ES \tcr{(why we need both? should motivate it first.)}. 
+At first, supervised learning can train the network models
+to realize a good performance by imitating an optimization-based approach.
+Then, we further improve the trained network models using the ES algorithm
+proposed by \cite{salimans2017evolution}. Suppose we omit the supervised
+learning and merely use ES. In that case the network models may find
+it hard to evolve from the randomly initialized network parameters (i.e., cold start).
+%which is known as the cold start. 
+
+\textbf{Supervised learning.} 
+\tcr{Initially, we run the simulation environment
+on NYC yellow taxi data set \cite{nycwebsite} (this sec. is general method., should not talk about specifics.)} and employ an optimization-based
+approach proposed by \cite{danassis2019putting} to solve the two-phase
+ride-sharing matching problems. We collect the graphs and their solved
+matching at each time step as the training set. We define $\hat{\text{Prob.}}(e)$
+as the label of edge $e$ to denote whether the edge $e$ belongs
+to the matching and use the network model to obtain $\text{Prob.}(e)$.
+We regard the problem as the classification task and minimize the
+binary cross-entropy loss of $\hat{\text{Prob.}}(e)$ and $\text{Prob.}(e)$
+by gradient descent.
+
+\textbf{Evolutionary strategy.} We consider the training as a \tcr{black-box
+optimization problem (this could only jeopardize our theoretical contribution)}, in which the network parameters $\theta$ is
+the input and the estimate of the performance under parameters $\theta$
+is the output. The general procedure of ES is to approximate the gradient
+of the network performance $\hat{g}_{\theta}$ and iteratively update
+the parameters $\theta\leftarrow\theta+\gamma\hat{g}_{\theta}$ where
+$\gamma$ is the learning rate. The estimation of the gradient is 
+
+\[
+\hat{g}_{\theta}=\frac{1}{N}\sum_{i=1}^{N}J(\theta'_{i})\frac{\epsilon_{i}}{\varphi},
+\]
+where $J(\theta'_{i})$ is the estimation of the network performance
+under the parameters $\theta'_{i}$, $\epsilon_{i}\sim\mathcal{N}(0,\mathbb{I})$
+is a sample from a multivariate Gaussian, the parameter permutation
+$\theta'_{i}$ takes the form $\theta'_{i}=\theta+\varphi\epsilon_{i}$,
+and $\varphi>0$ is a given constant.
+
+The network performance $J(\theta)$ is estimated by using the corresponding
+network to solve the \tcr{two-phase ride-sharing matching problem (ditto, use acronym.)} under
+the real-world data set. Specifically, we randomly select $k$ days
+from the original data set and calculate the average revenue of the
+network model as the estimation of the network performance. 
+
+Note that solving the \tcr{two-phase ride-sharing matching problem} requires
+both RGGCN and bipartite RGGCN. We cannot compute the gradients for
+both network models simultaneously. Therefore, we alternately fix
+the parameters of one of the network models and use ES to optimize
+the parameters of the other.
+
+\tcr{(there should be one big table in "algo. environment" summarizing all algo..}
+
+\section{Numerical Study}
+
+\section{Conclusion}
+
+\section{Acknowledgments}
+
+Identification of funding sources and other support, and thanks to
+individuals and groups that assisted in the research and the
+preparation of the work should be included in an acknowledgment
+section, which is placed just before the reference section in your
+document.
+
+This section has a special environment:
+\begin{verbatim}
+  \begin{acks}
+  ...
+  \end{acks}
+\end{verbatim}
+so that the information contained therein can be more easily collected
+during the article metadata extraction phase, and to ensure
+consistency in the spelling of the section heading.
+
+Authors should not prepare this section as a numbered or unnumbered {\verb|\section|}; please use the ``{\verb|acks|}'' environment.
+
+\section{Appendices}
+
+If your work needs an appendix, add it before the
+``\verb|\end{document}|'' command at the conclusion of your source
+document.
+
+Start the appendix with the ``\verb|appendix|'' command:
+\begin{verbatim}
+  \appendix
+\end{verbatim}
+and note that in the appendix, sections are lettered, not
+numbered. This document has two appendices, demonstrating the section
+and subsection identification method.
+
+\section{SIGCHI Extended Abstracts}
+
+The ``\verb|sigchi-a|'' template style (available only in \LaTeX\ and
+not in Word) produces a landscape-orientation formatted article, with
+a wide left margin. Three environments are available for use with the
+``\verb|sigchi-a|'' template style, and produce formatted output in
+the margin:
+\begin{itemize}
+\item {\verb|sidebar|}:  Place formatted text in the margin.
+\item {\verb|marginfigure|}: Place a figure in the margin.
+\item {\verb|margintable|}: Place a table in the margin.
+\end{itemize}
+
+%%
+%% The acknowledgments section is defined using the "acks" environment
+%% (and NOT an unnumbered section). This ensures the proper
+%% identification of the section in the article metadata, and the
+%% consistent spelling of the heading.
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{ref}
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-sigconf.tex'.

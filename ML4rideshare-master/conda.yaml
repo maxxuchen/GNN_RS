@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Minimal dependencies for the competition
+  - python=3.8.8
+  - numpy=1.20.1
+  - pandas=1.2.4
+  - networkx=2.5
+  - wandb
